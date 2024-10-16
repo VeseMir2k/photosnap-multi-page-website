@@ -7,8 +7,34 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
+  padding: 32px;
 }
 
-.nav a {
+.nav__link,
+.nav__button {
   font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__link {
+  color: var(--pure-black);
+}
+
+.nav__hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: var(--hr-color);
+}
+
+.nav__button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+  text-align: center;
 }

@@ -10,7 +10,8 @@ export default function Hamburger({ handleMenuToggle }: HamburgerProps) {
       onClick={handleMenuToggle}
       className={`${styles.hamburger} menuToggle`}
     >
-      X
+      <span></span>
+      <span></span>
     </button>
   )
 }

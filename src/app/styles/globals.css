@@ -3,6 +3,7 @@
   --pure-black: #000;
   --light-grey: #dfdfdf;
   --pure-white: #fff;
+  --hr-color: rgba(0, 0, 0, 0.25);
 }
 
 * {
