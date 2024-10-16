@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { dm_sans } from "./fonts/fonts"
 import "./styles/globals.css"
-import Navbar from "@/app/components/Navbar"
+import Navbar from "@/app/components/navbar/Navbar"
 
 export const metadata: Metadata = {
   title: "Create Next App",
