@@ -1,0 +1,15 @@
+@import "../../main.scss";
+
+.invite-button {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: $pure-black;
+  color: $pure-white;
+  text-decoration: none;
+  text-transform: uppercase;
+}

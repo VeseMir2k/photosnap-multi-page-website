@@ -1,6 +1,7 @@
 import Link from "next/link"
-import styles from "@/app/styles/components/navbar/nav.module.scss"
+import styles from "@/app/styles/components/nav.module.scss"
 import clsx from "clsx"
+import InviteButton from "./navbar/InviteButton"
 
 const navData = [
   { name: "HOME", href: "/" },
@@ -50,6 +51,8 @@ export default function Nav({ variant }: NavProps) {
     >
       {variant === "navbar" && navNavbar}
       {variant === "footer" && navFooter}
+      {variant === "navbar" && <hr className={styles["nav__hr"]} />}
+      {variant === "navbar" && <InviteButton />}
     </nav>
   )
 }
