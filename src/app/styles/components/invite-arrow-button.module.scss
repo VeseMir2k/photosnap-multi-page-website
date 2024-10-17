@@ -1,0 +1,18 @@
+@import "../main.scss";
+
+.invite-arrow-button {
+  color: $pure-white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  &__arrow-image {
+    margin-left: 22px;
+  }
+}

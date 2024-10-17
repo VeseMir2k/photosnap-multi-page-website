@@ -1,0 +1,10 @@
+@import "../../main.scss";
+
+.socials {
+  display: flex;
+  gap: 13px;
+  margin-top: 32px;
+  &__icon {
+    filter: brightness(0) invert(1);
+  }
+}

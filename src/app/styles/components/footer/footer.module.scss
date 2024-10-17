@@ -3,4 +3,7 @@
 .footer {
   padding: 56px 32px;
   background: $pure-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

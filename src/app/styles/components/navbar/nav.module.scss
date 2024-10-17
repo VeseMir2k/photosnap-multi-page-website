@@ -1,42 +1,40 @@
 @import "../../main.scss";
 
 .nav {
-  position: absolute;
-  top: 72px;
-  left: 0;
-  right: 0;
-  background-color: $pure-white;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  padding: 32px;
-}
 
-.nav__link,
-.nav__button {
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
+  &--navbar {
+    background-color: $pure-white;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 32px;
+  }
 
-.nav__link {
-  color: $pure-black;
-}
+  &--footer {
+    background-color: transparent;
+    margin: 50px 0 120px;
+    padding: 0;
+  }
 
-.nav__hr {
-  width: 100%;
-  border: none;
-  height: 1px;
-  background-color: $hr-color;
-}
-
-.nav__button {
-  width: 100%;
-  padding: 14px 0;
-  background-color: $pure-black;
-  color: $pure-white;
-  text-align: center;
+  &__link {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    color: $pure-black;
+    text-transform: uppercase;
+    text-decoration: none;
+    &--navbar {
+      color: $pure-black;
+    }
+    &--footer {
+      color: $pure-white;
+      font-size: 12px;
+    }
+  }
 }

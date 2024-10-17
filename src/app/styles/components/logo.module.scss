@@ -11,19 +11,11 @@
     align-items: center;
   }
 
-  &__triangle {
-    width: 19px;
-    height: 16px;
-    background: linear-gradient(to top right, $main-accent);
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    margin-right: 8px;
+  &__black {
+    color: $pure-black;
   }
 
-  &__title {
-    font-size: 16px;
-    letter-spacing: 0;
-    color: $pure-black;
-    font-weight: 900;
-    line-height: 0;
+  &__white {
+    color: $pure-white;
   }
 }
