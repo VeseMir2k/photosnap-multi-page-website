@@ -1,13 +1,14 @@
+"use client"
+
 import styles from "@/app/styles/components/navbar/hamburger.module.scss"
+import { useStore } from "@/app/stores/store"
 
-type HamburgerProps = {
-  handleMenuToggle: () => void
-}
+export default function Hamburger() {
+  const { toggleMenu } = useStore()
 
-export default function Hamburger({ handleMenuToggle }: HamburgerProps) {
   return (
     <button
-      onClick={handleMenuToggle}
+      onClick={toggleMenu}
       className={`${styles.hamburger} menuToggle`}
     >
       <span></span>
