@@ -1,0 +1,29 @@
+@import "../main.scss";
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__triangle {
+    width: 19px;
+    height: 16px;
+    background: linear-gradient(to top right, $main-accent);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    margin-right: 8px;
+  }
+
+  &__title {
+    font-size: 16px;
+    letter-spacing: 0;
+    color: var(--pure-black);
+    font-weight: 900;
+    line-height: 0;
+  }
+}

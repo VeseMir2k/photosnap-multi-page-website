@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "@/app/styles/navbar/nav.module.css"
+import styles from "@/app/styles/components/navbar/nav.module.scss"
 
 export default function Nav() {
   return (

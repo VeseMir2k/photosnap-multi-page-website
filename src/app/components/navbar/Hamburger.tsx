@@ -1,4 +1,4 @@
-import styles from "@/app/styles/navbar/hamburger.module.css"
+import styles from "@/app/styles/components/navbar/hamburger.module.scss"
 
 type HamburgerProps = {
   handleMenuToggle: () => void

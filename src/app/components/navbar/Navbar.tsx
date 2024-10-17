@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Logo from "../Logo"
 import Nav from "./Nav"
-import styles from "@/app/styles/navbar/navbar.module.css"
+import styles from "@/app/styles/components/navbar/navbar.module.scss"
 
 export default function Navbar() {
   const [isToggleMenu, setIsToggleMenu] = useState(false)

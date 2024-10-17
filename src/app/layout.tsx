@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { dm_sans } from "./fonts/fonts"
-import "./styles/globals.css"
+import "@/app/styles/global.scss"
 import Navbar from "@/app/components/navbar/Navbar"
 
 export const metadata: Metadata = {

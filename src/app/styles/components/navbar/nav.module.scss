@@ -1,9 +1,11 @@
+@import "../../main.scss";
+
 .nav {
   position: absolute;
   top: 72px;
   left: 0;
   right: 0;
-  background-color: var(--pure-white);
+  background-color: $pure-white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,20 +23,20 @@
 }
 
 .nav__link {
-  color: var(--pure-black);
+  color: $pure-black;
 }
 
 .nav__hr {
   width: 100%;
   border: none;
   height: 1px;
-  background-color: var(--hr-color);
+  background-color: $hr-color;
 }
 
 .nav__button {
   width: 100%;
   padding: 14px 0;
-  background-color: var(--pure-black);
+  background-color: $pure-black;
   color: var(--pure-white);
   text-align: center;
 }

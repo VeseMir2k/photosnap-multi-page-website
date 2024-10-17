@@ -1,3 +1,5 @@
+@import "../../main.scss";
+
 .hamburger {
   outline: none;
   background: none;
@@ -12,5 +14,5 @@
 .hamburger span {
   width: 100%;
   height: 1px;
-  background-color: var(--pure-black);
+  background-color: $pure-black;
 }
