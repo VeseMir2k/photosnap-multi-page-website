@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "@/app/styles/components/navbar/hamburger.module.scss"
+import styles from "@/app/styles/components/header/navbar/hamburger.module.scss"
 import { useStore } from "@/app/stores/store"
 import Image from "next/image"
 

@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { dm_sans } from "./fonts/fonts"
 import "@/app/styles/global.scss"
-import Navbar from "@/app/components/navbar/Navbar"
 import Footer from "@/app/components/footer/Footer"
+import Header from "./components/header/Header"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm_sans.className}`}>
-        <Navbar />
+        <Header />
         {children}
         <Footer />
       </body>

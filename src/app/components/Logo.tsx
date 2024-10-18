@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Hamburger from "./navbar/Hamburger"
+import Hamburger from "./header/navbar/Hamburger"
 import styles from "@/app/styles/components/logo.module.scss"
 
 type LogoProps = {

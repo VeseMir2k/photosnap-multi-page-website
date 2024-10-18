@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styles from "@/app/styles/components/nav.module.scss"
 import clsx from "clsx"
-import InviteButton from "./navbar/InviteButton"
+import InviteButton from "./header/navbar/InviteButton"
 
 const navData = [
   { name: "HOME", href: "/" },
