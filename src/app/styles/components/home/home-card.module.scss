@@ -1,18 +1,20 @@
 @import "../../main.scss";
 
-.card-top {
+.home-card {
   background-color: $pure-black;
   &__body {
     padding: 72px 32px;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 128px;
-      height: 6px;
-      top: -6px;
-      left: 32px;
-      background: linear-gradient(0.01turn, $main-accent);
+    &--accent {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 128px;
+        height: 6px;
+        top: -6px;
+        left: 32px;
+        background: linear-gradient(0.01turn, $main-accent);
+      }
     }
   }
   &__title {

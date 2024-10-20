@@ -17,6 +17,7 @@ export default function Footer() {
       <ArrowButton
         textButton="Get An Invite"
         hrefButton="/"
+        theme="dark"
       />
       <Copyright />
     </footer>

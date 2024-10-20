@@ -5,6 +5,7 @@ import clsx from "clsx"
 
 type CardTopProps = {
   theme: "dark" | "light"
+  accent?: boolean
   src: string
   title: string
   description: string
@@ -14,6 +15,7 @@ type CardTopProps = {
 
 export default function HomeCard({
   theme,
+  accent = false,
   src,
   title,
   description,
@@ -23,9 +25,9 @@ export default function HomeCard({
   return (
     <article
       className={clsx(
-        styles["card-top"],
-        theme === "dark" && styles["card-top--dark"],
-        theme === "light" && styles["card-top--light"]
+        styles["home-card"],
+        theme === "dark" && styles["home-card--dark"],
+        theme === "light" && styles["home-card--light"]
       )}
     >
       <Image
@@ -33,23 +35,28 @@ export default function HomeCard({
         layout="responsive"
         width={100}
         height={60}
-        alt="card-top-image"
+        alt="home-card-image"
       />
-      <div className={styles["card-top__body"]}>
+      <div
+        className={clsx(
+          styles["home-card__body"],
+          accent && styles["home-card__body--accent"]
+        )}
+      >
         <h2
           className={clsx(
-            styles["card-top__title"],
-            theme === "dark" && styles["card-top__title--dark"],
-            theme === "light" && styles["card-top__title--light"]
+            styles["home-card__title"],
+            theme === "dark" && styles["home-card__title--dark"],
+            theme === "light" && styles["home-card__title--light"]
           )}
         >
           {title}
         </h2>
         <p
           className={clsx(
-            styles["card-top__description"],
-            theme === "dark" && styles["card-top__description--dark"],
-            theme === "light" && styles["card-top__description--light"]
+            styles["home-card__description"],
+            theme === "dark" && styles["home-card__description--dark"],
+            theme === "light" && styles["home-card__description--light"]
           )}
         >
           {description}
