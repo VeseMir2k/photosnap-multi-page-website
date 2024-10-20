@@ -3,6 +3,7 @@ import { dm_sans } from "./fonts/fonts"
 import "@/app/styles/global.scss"
 import Footer from "@/app/components/footer/Footer"
 import Header from "./components/header/Header"
+import clsx from "clsx"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dm_sans.className}`}>
+      <body className={clsx(dm_sans.className)}>
         <Header />
         {children}
         <Footer />
