@@ -1,7 +1,7 @@
 h2 {
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 4.17px;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 3.3px;
   font-weight: bold;
 }
 
@@ -31,4 +31,12 @@ p {
   line-height: 25px;
   letter-spacing: normal;
   font-weight: normal;
+}
+
+@media (min-width: $md-breakpoint) {
+  h2 {
+    font-size: 40px;
+    letter-spacing: 4.17px;
+    font-weight: bold;
+  }
 }

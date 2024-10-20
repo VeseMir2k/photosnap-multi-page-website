@@ -7,8 +7,10 @@
   }
   &__title {
     color: $pure-white;
+    margin-bottom: 16px;
   }
   &__description {
-    color: $light-grey;
+    color: $card-color;
+    margin-bottom: 23px;
   }
 }
