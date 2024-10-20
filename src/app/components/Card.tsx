@@ -1,5 +1,5 @@
-import styles from "@/app/styles/components/home/home-card.module.scss"
-import ArrowButton from "../ArrowButton"
+import styles from "@/app/styles/components/card.module.scss"
+import ArrowButton from "./ArrowButton"
 import Image from "next/image"
 import clsx from "clsx"
 
@@ -25,9 +25,9 @@ export default function HomeCard({
   return (
     <article
       className={clsx(
-        styles["home-card"],
-        theme === "dark" && styles["home-card--dark"],
-        theme === "light" && styles["home-card--light"]
+        styles["card"],
+        theme === "dark" && styles["card--dark"],
+        theme === "light" && styles["card--light"]
       )}
     >
       <Image
@@ -35,28 +35,28 @@ export default function HomeCard({
         layout="responsive"
         width={100}
         height={60}
-        alt="home-card-image"
+        alt="card-image"
       />
       <div
         className={clsx(
-          styles["home-card__body"],
-          accent && styles["home-card__body--accent"]
+          styles["card__body"],
+          accent && styles["card__body--accent"]
         )}
       >
         <h2
           className={clsx(
-            styles["home-card__title"],
-            theme === "dark" && styles["home-card__title--dark"],
-            theme === "light" && styles["home-card__title--light"]
+            styles["card__title"],
+            theme === "dark" && styles["card__title--dark"],
+            theme === "light" && styles["card__title--light"]
           )}
         >
           {title}
         </h2>
         <p
           className={clsx(
-            styles["home-card__description"],
-            theme === "dark" && styles["home-card__description--dark"],
-            theme === "light" && styles["home-card__description--light"]
+            styles["card__description"],
+            theme === "dark" && styles["card__description--dark"],
+            theme === "light" && styles["card__description--light"]
           )}
         >
           {description}
