@@ -14,7 +14,10 @@ export default function Footer() {
       />
       <Socials />
       <Nav variant="footer" />
-      <ArrowButton text="GET AN INVITE" />
+      <ArrowButton
+        textButton="Get An Invite"
+        href="/"
+      />
       <Copyright />
     </footer>
   )

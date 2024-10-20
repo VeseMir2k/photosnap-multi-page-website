@@ -11,7 +11,7 @@ export default function Logo({ isHamburger, variantColor }: LogoProps) {
   return (
     <div className={styles.logo}>
       <Link
-        className={styles.logo__link}
+        className={(styles.logo__link, styles.link)}
         href="/"
       >
         <svg
@@ -57,6 +57,7 @@ export default function Logo({ isHamburger, variantColor }: LogoProps) {
             />
           </g>
         </svg>
+        <h1 className={styles.logo__title}>PHOTOSNAP</h1>
       </Link>
       {isHamburger && <Hamburger />}
     </div>

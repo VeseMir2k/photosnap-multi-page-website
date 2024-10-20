@@ -1,0 +1,14 @@
+@import "../../main.scss";
+
+.card-top {
+  background-color: $pure-black;
+  &__body {
+    padding: 72px 32px;
+  }
+  &__title {
+    color: $pure-white;
+  }
+  &__description {
+    color: $light-grey;
+  }
+}
