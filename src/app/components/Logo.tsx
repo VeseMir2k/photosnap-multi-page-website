@@ -1,6 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import Hamburger from "./header/navbar/Hamburger"
 import styles from "@/app/styles/components/logo.module.scss"
+import { useStore } from "@/app/stores/store"
 
 type LogoProps = {
   isHamburger: boolean
@@ -8,9 +11,12 @@ type LogoProps = {
 }
 
 export default function Logo({ isHamburger, variantColor }: LogoProps) {
+  const { closeMenu } = useStore()
+
   return (
     <div className={styles.logo}>
       <Link
+        onClick={closeMenu}
         className={(styles.logo__link, styles.link)}
         href="/"
       >

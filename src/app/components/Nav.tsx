@@ -1,7 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import styles from "@/app/styles/components/nav.module.scss"
 import clsx from "clsx"
 import InviteButton from "./header/navbar/InviteButton"
+import { useStore } from "@/app/stores/store"
 
 const navData = [
   { name: "HOME", href: "/" },
@@ -15,6 +18,8 @@ type NavProps = {
 }
 
 export default function Nav({ variant }: NavProps) {
+  const { toggleMenu } = useStore()
+
   const navFooter = navData.map((item) => (
     <Link
       key={item.name}
@@ -33,6 +38,7 @@ export default function Nav({ variant }: NavProps) {
     .filter((item) => !(item.name === "HOME"))
     .map((item) => (
       <Link
+        onClick={toggleMenu}
         key={item.name}
         className={styles.nav__link}
         href={item.href}
