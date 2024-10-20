@@ -1,9 +1,14 @@
 @import "../main.scss";
 
 .arrow-button {
-  color: $pure-white;
   text-decoration: none;
   display: flex;
+  &--dark {
+    color: $pure-white;
+  }
+  &--light {
+    color: $pure-black;
+  }
 
   &__text {
     font-size: 12px;
@@ -12,7 +17,7 @@
     text-transform: uppercase;
   }
 
-  &__arrow-image {
+  &__image {
     margin-left: 22px;
   }
 }

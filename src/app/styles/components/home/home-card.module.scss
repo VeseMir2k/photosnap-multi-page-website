@@ -4,13 +4,41 @@
   background-color: $pure-black;
   &__body {
     padding: 72px 32px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 128px;
+      height: 6px;
+      top: -6px;
+      left: 32px;
+      background: linear-gradient(0.01turn, $main-accent);
+    }
   }
   &__title {
     color: $pure-white;
     margin-bottom: 16px;
+    &--dark {
+      color: $pure-white;
+    }
+    &--light {
+      color: $pure-black;
+    }
   }
   &__description {
-    color: $card-color;
+    color: $card-dark-color;
     margin-bottom: 23px;
+    &--dark {
+      color: $card-dark-color;
+    }
+    &--light {
+      color: $card-light-color;
+    }
+  }
+  &--dark {
+    background-color: $pure-black;
+  }
+  &--light {
+    background-color: $pure-white;
   }
 }

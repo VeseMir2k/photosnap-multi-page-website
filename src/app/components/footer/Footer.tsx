@@ -16,7 +16,7 @@ export default function Footer() {
       <Nav variant="footer" />
       <ArrowButton
         textButton="Get An Invite"
-        href="/"
+        hrefButton="/"
       />
       <Copyright />
     </footer>

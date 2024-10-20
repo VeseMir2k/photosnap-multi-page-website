@@ -1,26 +1,42 @@
 import Link from "next/link"
-import Image from "next/image"
 import styles from "../styles/components/arrow-button.module.scss"
+import clsx from "clsx"
 
 type ArrowButtonProps = {
+  theme: "dark" | "light"
   textButton: string
-  href: string
+  hrefButton: string
 }
 
-export default function ArrowButton({ textButton, href }: ArrowButtonProps) {
+export default function ArrowButton({
+  theme,
+  textButton,
+  hrefButton,
+}: ArrowButtonProps) {
   return (
     <Link
-      className={styles["arrow-button"]}
-      href={href}
+      className={clsx(
+        styles["arrow-button"],
+        theme === "dark" && styles["arrow-button--dark"],
+        theme === "light" && styles["arrow-button--light"]
+      )}
+      href={hrefButton}
     >
       <span className={styles["arrow-button__text"]}>{textButton}</span>
-      <Image
-        className={styles["arrow-button__arrow-image"]}
-        src="assets/shared/desktop/arrow.svg"
-        width={43}
-        height={14}
-        alt="arrow"
-      />
+      <svg
+        className={styles["arrow-button__image"]}
+        xmlns="http://www.w3.org/2000/svg"
+        width="43"
+        height="14"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+          stroke="currentColor"
+        >
+          <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+        </g>
+      </svg>
     </Link>
   )
 }
