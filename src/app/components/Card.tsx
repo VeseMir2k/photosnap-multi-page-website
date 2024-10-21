@@ -6,7 +6,7 @@ import clsx from "clsx"
 type CardTopProps = {
   theme: "dark" | "light"
   accent?: boolean
-  src: string
+  srcImage: string
   title: string
   description: string
   textButton: string
@@ -16,7 +16,7 @@ type CardTopProps = {
 export default function HomeCard({
   theme,
   accent = false,
-  src,
+  srcImage,
   title,
   description,
   textButton,
@@ -32,7 +32,7 @@ export default function HomeCard({
     >
       <Image
         className={styles.card__image}
-        src={src}
+        src={srcImage}
         layout="responsive"
         width={100}
         height={60}
