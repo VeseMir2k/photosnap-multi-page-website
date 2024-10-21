@@ -6,19 +6,23 @@ type ArrowButtonProps = {
   theme: "dark" | "light"
   textButton: string
   hrefButton: string
+  arrowPosition?: "left" | "right"
 }
 
 export default function ArrowButton({
   theme,
   textButton,
   hrefButton,
+  arrowPosition = "left",
 }: ArrowButtonProps) {
   return (
     <Link
       className={clsx(
         styles["arrow-button"],
         theme === "dark" && styles["arrow-button--dark"],
-        theme === "light" && styles["arrow-button--light"]
+        theme === "light" && styles["arrow-button--light"],
+        arrowPosition === "left" && styles["arrow-button--left"],
+        arrowPosition === "right" && styles["arrow-button--right"]
       )}
       href={hrefButton}
     >

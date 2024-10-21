@@ -3,11 +3,17 @@
 .arrow-button {
   text-decoration: none;
   display: flex;
+  &--left {
+    justify-content: start;
+  }
+  &--right {
+    justify-content: space-between;
+  }
   &--dark {
-    color: $pure-white;
+    color: $white-color;
   }
   &--light {
-    color: $pure-black;
+    color: $black-color;
   }
 
   &__text {

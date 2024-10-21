@@ -1,4 +1,5 @@
 import Card from "./components/Card"
+import ImageCard from "./components/ImageCard"
 
 export default function Home() {
   return (
@@ -28,6 +29,8 @@ export default function Home() {
         hrefButton="/"
         theme="light"
       />
+
+      <ImageCard />
     </main>
   )
 }

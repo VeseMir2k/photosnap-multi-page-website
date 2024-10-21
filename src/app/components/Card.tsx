@@ -31,6 +31,7 @@ export default function HomeCard({
       )}
     >
       <Image
+        className={styles.card__image}
         src={src}
         layout="responsive"
         width={100}

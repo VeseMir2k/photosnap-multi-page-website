@@ -57,7 +57,7 @@ export default function Nav({ variant }: NavProps) {
     >
       {variant === "navbar" && navNavbar}
       {variant === "footer" && navFooter}
-      {variant === "navbar" && <hr className={styles["nav__hr"]} />}
+      {variant === "navbar" && <hr className={styles["nav__line"]} />}
       {variant === "navbar" && <InviteButton />}
     </nav>
   )
