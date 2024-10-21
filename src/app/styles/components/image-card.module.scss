@@ -6,7 +6,7 @@
     display: block;
   }
   &__body {
-    background-color: $card-light-color;
+    background: linear-gradient(to bottom, $overlay-image-card-color);
     position: absolute;
     top: 0;
     bottom: 0;
