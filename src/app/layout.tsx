@@ -4,6 +4,7 @@ import "@/app/styles/global.scss"
 import Footer from "@/app/components/footer/Footer"
 import Header from "./components/header/Header"
 import clsx from "clsx"
+import Overlay from "./components/Overlay"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(dm_sans.className)}>
+        <Overlay />
         <Header />
         {children}
         <Footer />
