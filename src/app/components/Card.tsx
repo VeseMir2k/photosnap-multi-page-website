@@ -9,8 +9,8 @@ type CardProps = {
   srcImage: string
   title: string
   description: string
-  textButton: string
-  hrefButton: string
+  textButton?: string
+  hrefButton?: string
 }
 
 export default function HomeCard({
@@ -62,11 +62,13 @@ export default function HomeCard({
         >
           {description}
         </p>
-        <ArrowButton
-          textButton={textButton}
-          hrefButton={hrefButton}
-          theme={theme}
-        />
+        {textButton && hrefButton && (
+          <ArrowButton
+            textButton={textButton}
+            hrefButton={hrefButton}
+            theme={theme}
+          />
+        )}
       </div>
     </article>
   )
