@@ -1,7 +1,6 @@
 import styles from "@/app/styles/components/stories/stories-card.module.scss"
 import ArrowButton from "../components/ArrowButton"
 import Image from "next/image"
-import clsx from "clsx"
 
 type StoriesCardProps = {
   srcImage: string
@@ -23,7 +22,7 @@ export default function StoriesCard({
   hrefButton,
 }: StoriesCardProps) {
   return (
-    <article className={clsx(styles["card"])}>
+    <article className={styles["stories-card"]}>
       <Image
         className={styles["stories-card__image"]}
         src={srcImage}
