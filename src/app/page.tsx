@@ -1,11 +1,12 @@
 import Card from "./components/Card"
+import FeatureCard from "./components/FeatureCard"
 import ImageCard from "./components/ImageCard"
 import styles from "@/app/styles/components/home/home.module.scss"
 
 export default function Home() {
   return (
     <main>
-      <section className={styles["section-hero"]}>
+      <section className={styles["home-hero"]}>
         <Card
           srcImage="/assets/home/mobile/create-and-share.jpg"
           title="Create and share your photo stories"
@@ -17,7 +18,7 @@ export default function Home() {
         />
       </section>
 
-      <section className={styles["section-view-stories"]}>
+      <section className={styles["home-view-stories"]}>
         <Card
           srcImage="/assets/home/mobile/beautiful-stories.jpg"
           title="Beautiful stories ever time"
@@ -36,7 +37,7 @@ export default function Home() {
         />
       </section>
 
-      <section className={styles["section-stories"]}>
+      <section className={styles["home-stories"]}>
         <ImageCard
           srcImage="/assets/stories/mobile/mountains.jpg"
           title="The Mountains"
@@ -64,6 +65,23 @@ export default function Home() {
           author="Samantha Brooke"
           textButton="Read Story"
           hrefButton="/"
+        />
+      </section>
+      <section className={styles["home-features"]}>
+        <FeatureCard
+          srcImage="/assets/features/desktop/responsive.svg"
+          title="100% Responsive"
+          description="No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen."
+        />
+        <FeatureCard
+          srcImage="/assets/features/desktop/no-limit.svg"
+          title="No Photo Upload Limit"
+          description="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+        />
+        <FeatureCard
+          srcImage="/assets/features/desktop/embed.svg"
+          title="Available to Embed"
+          description="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "
         />
       </section>
     </main>

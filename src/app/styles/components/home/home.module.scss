@@ -1,0 +1,9 @@
+@import "../../main.scss";
+
+.home-features {
+  padding: 64px 32px 90px;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
