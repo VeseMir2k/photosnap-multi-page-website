@@ -1,4 +1,5 @@
 import ImageCard from "../components/ImageCard"
+import StoriesCard from "./StoriesCard"
 
 const storiesData = [
   {
@@ -41,7 +42,7 @@ const storiesData = [
     date: "March 29th 2020",
     title: "King on Africa: Part II",
     author: "Tim Hillenburg",
-    image: "/assets/stories/mobile/king-of-africa.jpg",
+    image: "/assets/stories/mobile/king-on-africa.jpg",
   },
   {
     date: "March 21st 2020",
@@ -105,5 +106,18 @@ export default function Stories() {
       hrefButton="/"
     />
   ))
-  return <section>{stories}</section>
+  return (
+    <section>
+      <StoriesCard
+        srcImage="/assets/stories/mobile/moon-of-appalacia.jpg"
+        title="HAZY FULL MOON OF APPALACHIA"
+        date="March 2nd 2020"
+        author="John Appleseed"
+        description='The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.'
+        textButton="Read the story"
+        hrefButton="/"
+      />
+      {stories}
+    </section>
+  )
 }

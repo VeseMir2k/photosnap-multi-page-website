@@ -3,7 +3,7 @@ import ArrowButton from "./ArrowButton"
 import Image from "next/image"
 import clsx from "clsx"
 
-type CardTopProps = {
+type CardProps = {
   theme: "dark" | "light"
   accent?: boolean
   srcImage: string
@@ -21,7 +21,7 @@ export default function HomeCard({
   description,
   textButton,
   hrefButton,
-}: CardTopProps) {
+}: CardProps) {
   return (
     <article
       className={clsx(

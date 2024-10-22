@@ -3,14 +3,14 @@ import styles from "../styles/components/arrow-button.module.scss"
 import clsx from "clsx"
 
 type ArrowButtonProps = {
-  theme: "dark" | "light"
+  theme?: "dark" | "light"
   textButton: string
   hrefButton: string
   arrowPosition?: "left" | "right"
 }
 
 export default function ArrowButton({
-  theme,
+  theme = "light",
   textButton,
   hrefButton,
   arrowPosition = "left",
