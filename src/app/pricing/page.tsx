@@ -1,3 +1,5 @@
+import InviteBanner from "../components/InviteBanner"
+
 export default function Pricing() {
-  return <h2>Pricing</h2>
+  return <InviteBanner />
 }

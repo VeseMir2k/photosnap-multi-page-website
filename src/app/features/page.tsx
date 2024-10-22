@@ -1,3 +1,5 @@
+import InviteBanner from "../components/InviteBanner"
+
 export default function Features() {
-  return <h2>Features</h2>
+  return <InviteBanner />
 }
