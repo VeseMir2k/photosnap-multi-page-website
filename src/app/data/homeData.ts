@@ -1,4 +1,4 @@
-export const viewStoriesData = [
+export const homeViewStoriesData = [
   {
     srcImage: "/assets/home/mobile/beautiful-stories.jpg",
     title: "Beautiful stories ever time",
@@ -13,7 +13,7 @@ export const viewStoriesData = [
   },
 ]
 
-export const storiesData = [
+export const homeStoriesData = [
   {
     srcImage: "/assets/stories/mobile/mountains.jpg",
     title: "The Mountains",
@@ -36,7 +36,7 @@ export const storiesData = [
   },
 ]
 
-export const featuresData = [
+export const homeFeaturesData = [
   {
     srcImage: "/assets/features/desktop/responsive.svg",
     title: "100% Responsive",

@@ -1,6 +1,6 @@
 import ImageCard from "../components/ImageCard"
 import StoriesCard from "./StoriesCard"
-import storiesData from "./storiesData"
+import { storiesData } from "../data/storiesData"
 import styles from "@/app/styles/components/stories/stories.module.scss"
 
 export default function Stories() {
@@ -16,8 +16,8 @@ export default function Stories() {
     />
   ))
   return (
-    <>
-      <section className={styles["featured-story"]}>
+    <main className={styles["stories"]}>
+      <section className={styles["stories__featured-story"]}>
         <StoriesCard
           srcImage="/assets/stories/mobile/moon-of-appalacia.jpg"
           title="HAZY FULL MOON OF APPALACHIA"
@@ -28,7 +28,7 @@ export default function Stories() {
           hrefButton="/"
         />
       </section>
-      <section className={styles["stories-list"]}>{stories}</section>
-    </>
+      <section className={styles["stories__stories-list"]}>{stories}</section>
+    </main>
   )
 }

@@ -2,10 +2,14 @@ import Card from "./components/Card"
 import FeatureCard from "./components/FeatureCard"
 import ImageCard from "./components/ImageCard"
 import styles from "@/app/styles/components/home/home.module.scss"
-import { viewStoriesData, storiesData, featuresData } from "./data/homeData"
+import {
+  homeViewStoriesData,
+  homeStoriesData,
+  homeFeaturesData,
+} from "./data/homeData"
 
 export default function Home() {
-  const viewStories = viewStoriesData.map((item) => (
+  const viewStories = homeViewStoriesData.map((item) => (
     <Card
       key={item.title}
       srcImage={item.srcImage}
@@ -17,7 +21,7 @@ export default function Home() {
     />
   ))
 
-  const stories = storiesData.map((item) => (
+  const stories = homeStoriesData.map((item) => (
     <ImageCard
       key={item.title}
       srcImage={item.srcImage}
@@ -28,7 +32,7 @@ export default function Home() {
     />
   ))
 
-  const features = featuresData.map((item) => (
+  const features = homeFeaturesData.map((item) => (
     <FeatureCard
       srcImage={item.srcImage}
       title={item.title}
@@ -37,8 +41,8 @@ export default function Home() {
   ))
 
   return (
-    <main>
-      <section className={styles["home-hero"]}>
+    <main className={styles["home"]}>
+      <section className={styles["home__hero"]}>
         <Card
           srcImage="/assets/home/mobile/create-and-share.jpg"
           title="Create and share your photo stories"
@@ -50,9 +54,9 @@ export default function Home() {
         />
       </section>
 
-      <section className={styles["home-view-stories"]}>{viewStories}</section>
-      <section className={styles["home-stories"]}>{stories}</section>
-      <section className={styles["home-features"]}>{features}</section>
+      <section className={styles["home__view-stories"]}>{viewStories}</section>
+      <section className={styles["home__stories"]}>{stories}</section>
+      <section className={styles["home__features"]}>{features}</section>
     </main>
   )
 }

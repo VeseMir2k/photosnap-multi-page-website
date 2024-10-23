@@ -1,4 +1,4 @@
-const storiesData = [
+export const storiesData = [
   {
     date: "April 16th 2020",
     title: "The Mountains",
@@ -90,5 +90,3 @@ const storiesData = [
     image: "/assets/stories/mobile/land-of-dreams.jpg",
   },
 ]
-
-export default storiesData
