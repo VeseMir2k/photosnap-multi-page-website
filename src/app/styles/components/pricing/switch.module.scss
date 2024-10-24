@@ -1,0 +1,40 @@
+@import "../../main.scss";
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-weight: 600;
+  &__monthly,
+  &__yearly {
+    color: $card-light-color;
+  }
+  &__monthly--check,
+  &__yearly--check {
+    color: $black-color;
+  }
+  &__input {
+    width: 64px;
+    height: 32px;
+    background-color: $light-grey-color;
+    border-radius: 16px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      width: 24px;
+      height: 24px;
+      background-color: $black-color;
+      border-radius: 50%;
+    }
+    &--monthly::after {
+      left: 4px;
+      right: auto;
+    }
+    &--yearly::after {
+      left: auto;
+      right: 4px;
+    }
+  }
+}
