@@ -4,36 +4,7 @@ import styles from "@/app/styles/components/pricing/plans.module.scss"
 import Switch from "./Switch"
 import PlanCard from "./PlanCard"
 import { useStore } from "../stores/store"
-
-const plansData = [
-  {
-    variant: "Basic",
-    description:
-      "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-    price: {
-      month: "19.00",
-      year: "190.00",
-    },
-  },
-  {
-    variant: "Pro",
-    description:
-      "More advanced features available. Recommended for photography veterans and professionals.",
-    price: {
-      month: "39.00",
-      year: "390.00",
-    },
-  },
-  {
-    variant: "Business",
-    description:
-      "Additional features available such as more detailed metrics. Recommended for business owners.",
-    price: {
-      month: "99.00",
-      year: "990.00",
-    },
-  },
-]
+import { plansData } from "../data/plansData"
 
 export default function Plans() {
   const { plan } = useStore()
