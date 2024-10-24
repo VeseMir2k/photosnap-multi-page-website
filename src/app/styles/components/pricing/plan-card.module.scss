@@ -1,4 +1,45 @@
 @import "../../main.scss";
 
 .plan-card {
+  position: relative;
+  padding: 56px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  &__info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  &__cost {
+    text-align: center;
+  }
+  &--light {
+    background-color: $light-grey-color;
+    color: $black-color;
+  }
+  &--light &__description,
+  &--light &__per {
+    color: $card-light-color;
+  }
+  &--dark {
+    background-color: $black-color;
+    color: $white-color;
+  }
+  &--dark &__description,
+  &--dark &__per {
+    color: $card-dark-color;
+  }
+  &--accent {
+    &::before {
+      content: "";
+      background: linear-gradient(0.01turn, $accent-color);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+    }
+  }
 }

@@ -1,8 +1,10 @@
 import styles from "@/app/styles/components/pricing/plan-card.module.scss"
 import Button from "../components/Button"
+import clsx from "clsx"
 
 type PlanCardProps = {
   theme: "light" | "dark"
+  accent: boolean
   variant: string
   description: string
   price: string
@@ -12,7 +14,8 @@ type PlanCardProps = {
 }
 
 export default function PlanCard({
-  theme,
+  theme = "light",
+  accent = false,
   variant,
   description,
   price,
@@ -21,7 +24,14 @@ export default function PlanCard({
   textButton,
 }: PlanCardProps) {
   return (
-    <div className={styles["plan-card"]}>
+    <div
+      className={clsx(
+        styles["plan-card"],
+        theme === "light" && styles["plan-card--light"],
+        theme === "dark" && styles["plan-card--dark"],
+        accent && styles["plan-card--accent"]
+      )}
+    >
       <div className={styles["plan-card__info"]}>
         <h3 className={styles["plan-card__variant"]}>{variant}</h3>
         <p className={styles["plan-card__description"]}>{description}</p>

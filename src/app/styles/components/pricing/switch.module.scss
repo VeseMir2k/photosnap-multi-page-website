@@ -5,6 +5,7 @@
   align-items: center;
   gap: 32px;
   font-weight: 600;
+  margin-bottom: 16px;
   &__monthly,
   &__yearly {
     color: $card-light-color;
@@ -16,7 +17,7 @@
   &__input {
     width: 64px;
     height: 32px;
-    background-color: $light-grey-color;
+    background-color: $grey-color;
     border-radius: 16px;
     position: relative;
     &::after {
