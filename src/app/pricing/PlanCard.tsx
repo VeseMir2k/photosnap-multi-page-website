@@ -3,8 +3,8 @@ import Button from "../components/Button"
 import clsx from "clsx"
 
 type PlanCardProps = {
-  theme: "light" | "dark"
-  accent: boolean
+  theme?: "light" | "dark"
+  accent?: boolean
   variant: string
   description: string
   price: string
