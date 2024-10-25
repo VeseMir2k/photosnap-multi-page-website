@@ -1,1 +1,10 @@
 @import "../../main.scss";
+
+.features {
+  padding: 0 24px 65px;
+  &__title {
+    text-transform: uppercase;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $black-color;
+  }
+}
