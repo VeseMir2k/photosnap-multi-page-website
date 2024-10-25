@@ -30,7 +30,7 @@ export default function Home() {
   const stories = homeStoriesData.map((item) => (
     <ImageCard
       key={item.title}
-      srcImage={item.srcImage.mobile}
+      srcImage={item.srcImage}
       title={item.title}
       author={item.author}
       textButton="Read Story"

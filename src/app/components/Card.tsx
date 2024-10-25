@@ -36,11 +36,11 @@ export default function HomeCard({
     >
       <picture>
         <source
-          media="(max-width: 480px)"
+          media="(max-width: 768px)"
           srcSet={srcImage.mobile}
         />
         <source
-          media="(max-width: 768px)"
+          media="(max-width: 960px)"
           srcSet={srcImage.tablet}
         />
         <Image

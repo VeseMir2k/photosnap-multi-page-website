@@ -3,7 +3,11 @@ import ArrowButton from "../components/ArrowButton"
 import Image from "next/image"
 
 type StoriesCardProps = {
-  srcImage: string
+  srcImage: {
+    mobile: string
+    tablet: string
+    desktop: string
+  }
   title: string
   date: string
   author: string
@@ -23,14 +27,24 @@ export default function StoriesCard({
 }: StoriesCardProps) {
   return (
     <article className={styles["stories-card"]}>
-      <Image
-        className={styles["stories-card__image"]}
-        src={srcImage}
-        layout="responsive"
-        width={100}
-        height={60}
-        alt="card-image"
-      />
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcSet={srcImage.mobile}
+        />
+        <source
+          media="(max-width: 960px)"
+          srcSet={srcImage.tablet}
+        />
+        <Image
+          className={styles["stories-card__image"]}
+          src={srcImage.desktop}
+          alt="Descriptive text for the image"
+          width={100}
+          height={60}
+          layout="responsive"
+        />
+      </picture>
       <div className={styles["stories-card__body"]}>
         <p className={styles["stories-card__header"]}>
           LAST MONTH’S FEATURED STORY

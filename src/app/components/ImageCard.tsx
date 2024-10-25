@@ -3,7 +3,11 @@ import Image from "next/image"
 import ArrowButton from "./ArrowButton"
 
 type ImageCardProps = {
-  srcImage: string
+  srcImage: {
+    mobile: string
+    tablet: string
+    desktop: string
+  }
   date?: string
   title: string
   author: string
@@ -22,14 +26,24 @@ export default function ImageCard({
 }: ImageCardProps) {
   return (
     <div className={styles["image-card"]}>
-      <Image
-        className={styles["image-card__image"]}
-        src={srcImage}
-        layout="responsive"
-        alt="image-card"
-        width={100}
-        height={60}
-      />
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcSet={srcImage.mobile}
+        />
+        <source
+          media="(max-width: 960px)"
+          srcSet={srcImage.tablet}
+        />
+        <Image
+          className={styles["image-card__image"]}
+          src={srcImage.desktop}
+          alt="Descriptive text for the image"
+          width={100}
+          height={60}
+          layout="responsive"
+        />
+      </picture>
       <div className={styles["image-card__body"]}>
         <div className={styles["image-card__details"]}>
           <div className={styles["image-card__meta"]}>

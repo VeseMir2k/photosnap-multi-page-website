@@ -3,11 +3,16 @@ import StoriesCard from "./StoriesCard"
 import { storiesData } from "../data/storiesData"
 import styles from "@/app/styles/components/stories/stories.module.scss"
 
+const imagesTopData = {
+  mobile: "/assets/stories/mobile/moon-of-appalacia.jpg",
+  tablet: "/assets/stories/tablet/moon-of-appalacia.jpg",
+  desktop: "/assets/stories/desktop/moon-of-appalacia.jpg",
+}
 export default function Stories() {
   const stories = storiesData.map((item) => (
     <ImageCard
       key={item.title}
-      srcImage={item.image}
+      srcImage={item.srcImage}
       date={item.date}
       title={item.title}
       author={item.author}
@@ -19,7 +24,7 @@ export default function Stories() {
     <main className={styles["stories"]}>
       <section className={styles["stories__featured-story"]}>
         <StoriesCard
-          srcImage="/assets/stories/mobile/moon-of-appalacia.jpg"
+          srcImage={imagesTopData}
           title="HAZY FULL MOON OF APPALACHIA"
           date="March 2nd 2020"
           author="John Appleseed"
