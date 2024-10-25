@@ -11,6 +11,7 @@ export default function Plans() {
 
   const plans = plansData.map((item) => (
     <PlanCard
+      key={item.variant}
       accent={item.variant === "Pro" && true}
       theme={item.variant === "Pro" ? "dark" : "light"}
       variant={item.variant}

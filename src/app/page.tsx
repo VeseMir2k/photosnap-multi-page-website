@@ -34,6 +34,7 @@ export default function Home() {
 
   const features = homeFeaturesData.map((item) => (
     <FeatureCard
+      key={item.title}
       srcImage={item.srcImage}
       title={item.title}
       description={item.description}

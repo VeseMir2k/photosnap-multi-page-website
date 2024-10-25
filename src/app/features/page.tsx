@@ -7,6 +7,7 @@ import FeatureCard from "../components/FeatureCard"
 export default function Features() {
   const features = featuresData.map((item) => (
     <FeatureCard
+      key={item.title}
       srcImage={item.srcImage}
       title={item.title}
       description={item.description}
