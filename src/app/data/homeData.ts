@@ -1,12 +1,20 @@
 export const homeViewStoriesData = [
   {
-    srcImage: "/assets/home/mobile/beautiful-stories.jpg",
+    srcImage: {
+      mobile: "/assets/home/mobile/beautiful-stories.jpg",
+      tablet: "/assets/home/tablet/beautiful-stories.jpg",
+      desktop: "/assets/home/desktop/beautiful-stories.jpg",
+    },
     title: "Beautiful stories ever time",
     description:
       "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
   },
   {
-    srcImage: "/assets/home/mobile/designed-for-everyone.jpg",
+    srcImage: {
+      mobile: "/assets/home/mobile/designed-for-everyone.jpg",
+      tablet: "/assets/home/tablet/designed-for-everyone.jpg",
+      desktop: "/assets/home/desktop/designed-for-everyone.jpg",
+    },
     title: "Designed for everyone",
     description:
       "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ",
@@ -15,22 +23,38 @@ export const homeViewStoriesData = [
 
 export const homeStoriesData = [
   {
-    srcImage: "/assets/stories/mobile/mountains.jpg",
+    srcImage: {
+      mobile: "/assets/stories/mobile/mountains.jpg",
+      tablet: "/assets/stories/tablet/mountains.jpg",
+      desktop: "/assets/stories/desktop/mountains.jpg",
+    },
     title: "The Mountains",
     author: "John Appleseed",
   },
   {
-    srcImage: "/assets/stories/mobile/cityscapes.jpg",
+    srcImage: {
+      mobile: "/assets/stories/mobile/cityscapes.jpg",
+      tablet: "/assets/stories/tablet/cityscapes.jpg",
+      desktop: "/assets/stories/desktop/cityscapes.jpg",
+    },
     title: "Sunset Cityscapes",
     author: "Benjamin Cruz",
   },
   {
-    srcImage: "/assets/stories/mobile/18-days-voyage.jpg",
+    srcImage: {
+      mobile: "/assets/stories/mobile/18-days-voyage.jpg",
+      tablet: "/assets/stories/tablet/18-days-voyage.jpg",
+      desktop: "/assets/stories/desktop/18-days-voyage.jpg",
+    },
     title: "18 Days Voyage",
     author: "Alexei Borodin",
   },
   {
-    srcImage: "/assets/stories/mobile/architecturals.jpg",
+    srcImage: {
+      mobile: "/assets/stories/mobile/architecturals.jpg",
+      tablet: "/assets/stories/tablet/architecturals.jpg",
+      desktop: "/assets/stories/desktop/architecturals.jpg",
+    },
     title: "Architecturals",
     author: "Samantha Brooke",
   },

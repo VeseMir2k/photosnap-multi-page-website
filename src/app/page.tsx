@@ -8,6 +8,12 @@ import {
   homeFeaturesData,
 } from "./data/homeData"
 
+const imagesTopData = {
+  mobile: "/assets/home/mobile/create-and-share.jpg",
+  tablet: "/assets/home/tablet/create-and-share.jpg",
+  desktop: "/assets/home/desktop/create-and-share.jpg",
+}
+
 export default function Home() {
   const viewStories = homeViewStoriesData.map((item) => (
     <Card
@@ -24,7 +30,7 @@ export default function Home() {
   const stories = homeStoriesData.map((item) => (
     <ImageCard
       key={item.title}
-      srcImage={item.srcImage}
+      srcImage={item.srcImage.mobile}
       title={item.title}
       author={item.author}
       textButton="Read Story"
@@ -45,7 +51,7 @@ export default function Home() {
     <main className={styles["home"]}>
       <section className={styles["home__hero"]}>
         <Card
-          srcImage="/assets/home/mobile/create-and-share.jpg"
+          srcImage={imagesTopData}
           title="Create and share your photo stories"
           description="Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others."
           textButton="GET AN INVITE"

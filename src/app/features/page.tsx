@@ -4,6 +4,12 @@ import styles from "@/app/styles/components/features/features.module.scss"
 import { featuresData } from "../data/featuresData"
 import FeatureCard from "../components/FeatureCard"
 
+const imagesTopData = {
+  mobile: "/assets/features/mobile/hero.jpg",
+  tablet: "/assets/features/tablet/hero.jpg",
+  desktop: "/assets/features/desktop/hero.jpg",
+}
+
 export default function Features() {
   const features = featuresData.map((item) => (
     <FeatureCard
@@ -22,7 +28,7 @@ export default function Features() {
           theme="dark"
           title="FEATURES"
           description="We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories."
-          srcImage="/assets/features/mobile/hero.jpg"
+          srcImage={imagesTopData}
         />
       </section>
       <section className={styles["features__features-list"]}>

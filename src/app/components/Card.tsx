@@ -6,7 +6,11 @@ import clsx from "clsx"
 type CardProps = {
   theme: "dark" | "light"
   accent?: boolean
-  srcImage: string
+  srcImage: {
+    mobile: string
+    tablet: string
+    desktop: string
+  }
   title: string
   description: string
   textButton?: string
@@ -25,28 +29,37 @@ export default function HomeCard({
   return (
     <article
       className={clsx(
-        styles["card"],
+        styles.card,
         theme === "dark" && styles["card--dark"],
         theme === "light" && styles["card--light"]
       )}
     >
-      <Image
-        className={styles.card__image}
-        src={srcImage}
-        layout="responsive"
-        width={100}
-        height={60}
-        alt="card-image"
-      />
+      <picture>
+        <source
+          media="(max-width: 480px)"
+          srcSet={srcImage.mobile}
+        />
+        <source
+          media="(max-width: 768px)"
+          srcSet={srcImage.tablet}
+        />
+        <Image
+          src={srcImage.desktop}
+          alt="Descriptive text for the image"
+          width={100}
+          height={60}
+          layout="responsive"
+        />
+      </picture>
       <div
         className={clsx(
-          styles["card__body"],
+          styles.card__body,
           accent && styles["card__body--accent"]
         )}
       >
         <h2
           className={clsx(
-            styles["card__title"],
+            styles.card__title,
             theme === "dark" && styles["card__title--dark"],
             theme === "light" && styles["card__title--light"]
           )}
@@ -55,7 +68,7 @@ export default function HomeCard({
         </h2>
         <p
           className={clsx(
-            styles["card__description"],
+            styles.card__description,
             theme === "dark" && styles["card__description--dark"],
             theme === "light" && styles["card__description--light"]
           )}
