@@ -38,7 +38,7 @@ export default function ImageCard({
         <Image
           className={styles["image-card__image"]}
           src={srcImage.desktop}
-          alt="Descriptive text for the image"
+          alt={title}
           width={100}
           height={60}
           layout="responsive"
