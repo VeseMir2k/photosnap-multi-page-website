@@ -150,4 +150,14 @@ export const storiesData = [
       desktop: "/assets/stories/desktop/land-of-dreams.jpg",
     },
   },
+  {
+    date: "March 19th 2020",
+    title: "Rage of The Sea",
+    author: "Mohammed Abdul",
+    srcImage: {
+      mobile: "/assets/stories/mobile/rage-of-the-sea.jpg",
+      tablet: "/assets/stories/tablet/rage-of-the-sea.jpg",
+      desktop: "/assets/stories/desktop/rage-of-the-sea.jpg",
+    },
+  },
 ]
