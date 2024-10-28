@@ -28,11 +28,11 @@ export default function ImageCard({
     <div className={styles["image-card"]}>
       <picture>
         <source
-          media="(max-width: 768px)"
+          media="(max-width: 767px)"
           srcSet={srcImage.mobile}
         />
         <source
-          media="(max-width: 960px)"
+          media="(max-width: 1023px)"
           srcSet={srcImage.tablet}
         />
         <Image

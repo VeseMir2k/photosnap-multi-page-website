@@ -81,7 +81,17 @@
   }
 }
 
-@media (min-width: $md-breakpoint) {
+@media (min-width: $lg-breakpoint) {
+  .card {
+    &__image {
+      width: 45%;
+    }
+    &__body {
+      width: 55%;
+    }
+  }
+}
+@media (min-width: $xl-breakpoint) {
   .card {
     &__image {
       width: 60%;

@@ -9,3 +9,25 @@
     gap: 55px;
   }
 }
+
+@media (min-width: $md-breakpoint) {
+  .home {
+    &__stories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .home {
+    &__stories {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &__features {
+      padding: 120px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
