@@ -80,3 +80,14 @@
     }
   }
 }
+
+@media (min-width: $md-breakpoint) {
+  .card {
+    &__image {
+      width: 60%;
+    }
+    &__body {
+      width: 40%;
+    }
+  }
+}
