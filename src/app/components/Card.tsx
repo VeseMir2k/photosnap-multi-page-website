@@ -11,6 +11,7 @@ type CardProps = {
     tablet: string
     desktop: string
   }
+  imagePosition?: "left" | "right"
   title: string
   description: string
   textButton?: string
@@ -21,6 +22,7 @@ export default function HomeCard({
   theme,
   accent = false,
   srcImage,
+  imagePosition = "left",
   title,
   description,
   textButton,
@@ -34,7 +36,13 @@ export default function HomeCard({
         theme === "light" && styles["card--light"]
       )}
     >
-      <picture>
+      <picture
+        className={clsx(
+          styles["card__image"],
+          imagePosition === "left" && styles["card__image--left"],
+          imagePosition === "right" && styles["card__image--right"]
+        )}
+      >
         <source
           media="(max-width: 768px)"
           srcSet={srcImage.mobile}

@@ -3,7 +3,9 @@
 .card {
   background-color: $black-color;
   &__image {
-    display: block;
+    & img {
+      display: block;
+    }
   }
   &__body {
     padding: 72px 32px;
@@ -23,6 +25,7 @@
   &__title {
     color: $white-color;
     margin-bottom: 16px;
+    text-transform: uppercase;
     &--dark {
       color: $white-color;
     }
@@ -45,5 +48,35 @@
   }
   &--light {
     background-color: $white-color;
+  }
+}
+
+@media (min-width: $md-breakpoint) {
+  .card {
+    display: flex;
+    &__image {
+      width: 35%;
+      &--left {
+        order: 1;
+      }
+      &--right {
+        order: -1;
+      }
+    }
+    &__body {
+      width: 65%;
+      align-self: center;
+      padding: 0 80px;
+      &--accent {
+        position: relative;
+        &::before {
+          width: 6px;
+          height: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
   }
 }

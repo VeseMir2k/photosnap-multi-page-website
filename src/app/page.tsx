@@ -15,10 +15,11 @@ const topImages = {
 }
 
 export default function Home() {
-  const viewStories = homeViewStoriesData.map((item) => (
+  const viewStories = homeViewStoriesData.map((item, index) => (
     <Card
       key={item.title}
       srcImage={item.srcImage}
+      imagePosition={index === 0 || index === 2 ? "right" : "left"}
       title={item.title}
       description={item.description}
       textButton="View the stories"
